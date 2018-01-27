@@ -9,7 +9,7 @@ body {
 
 header {
     background: #fff no-repeat center/50% url("../images/smu-cpe-logo.png");
-    background-size: contain;
+    background-size: 450px;
     height: 115px;
 }
 

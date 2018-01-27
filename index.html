@@ -24,7 +24,7 @@
             </div>
         </div>
     </div>
-    <script src="javascript/main.js"></script>
+    <script src="javascript/Timer.js"></script>
     <script>
         const form = document.getElementById("form");
         const input = document.getElementById("txtTime");
@@ -32,8 +32,10 @@
 
         startBtn.onclick = function() {
             const time = input.value;
+            const timer = new Timer(time);
+            timer.countDown();
+
             form.style.setProperty('display', 'none');
-            init(time);
         };
     </script>
 </body>
