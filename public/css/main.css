@@ -3,7 +3,7 @@ body {
     padding: 0;
     font-family: 'Roboto Slab', serif;
     color: #fff;
-    background-image: url('http://catalog.smu.edu/mime/media/25/2/smu-campus.jpg');
+    background: #000 url('http://catalog.smu.edu/mime/media/25/2/smu-campus.jpg') top no-repeat;
     height: 100%;
 }
 
