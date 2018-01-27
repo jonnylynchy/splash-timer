@@ -43,6 +43,7 @@ a, a:active, a:visited {
     border-radius: 5px;
     margin-left: 12px;
     float: left;
+    text-shadow: none;
 }
 
 .container {
