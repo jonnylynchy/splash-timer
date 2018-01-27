@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/jonnylynchy/splash-timer/issues"
   },
-  "homepage": "https://github.com/jonnylynchy/splash-timer#readme"
+  "homepage": "https://github.com/jonnylynchy/splash-timer#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
 }
