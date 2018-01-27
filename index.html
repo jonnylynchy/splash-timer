@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Countdown...</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header></header>
+    <div class="container">
+        <h2>Always Be Coding</h2>
+        <p>(Session in progress)</p>
+        <div id="timer-background">
+            <span id="form">
+                <input type="text" id="txtTime" />
+                <a href="#" id="startCountdown">Start</a>
+                <span class="clear"></span>
+            </span>
+            <h2 id="timesup"></h2>
+            <div>
+                <h1 id="countdown"></h1>
+            </div>
+        </div>
+    </div>
+    <script src="javascript/main.js"></script>
+    <script>
+        const form = document.getElementById("form");
+        const input = document.getElementById("txtTime");
+        const startBtn = document.getElementById("startCountdown");
+
+        startBtn.onclick = function() {
+            const time = input.value;
+            form.style.setProperty('display', 'none');
+            init(time);
+        };
+    </script>
+</body>
+</html>

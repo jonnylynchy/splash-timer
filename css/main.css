@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Slab', serif;
+    color: #fff;
+    background-image: url('http://catalog.smu.edu/mime/media/25/2/smu-campus.jpg');
+    height: 100%;
+}
+
+header {
+    background: #fff no-repeat center/50% url("../images/smu-cpe-logo.png");
+    background-size: contain;
+    height: 115px;
+}
+
+h1 {
+    font-size: 120px;
+    margin:0;
+}
+
+h2 {
+    margin: 25px;
+    font-size: 50px;
+}
+
+input {
+    font-size: 30px;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    height: 67px;
+    width: 150px;
+    float: left;
+}
+
+a, a:active, a:visited {
+    text-decoration: none;
+    padding: 15px;
+    font-size: 28px;
+    background: rgb(14, 162, 241);
+    color: #fff;
+    border-radius: 5px;
+    margin-left: 12px;
+    float: left;
+}
+
+.container {
+    background-size: cover;
+    text-align: center;
+    text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
+
+}
+
+#timer-background {
+    background: rgba(00, 00, 00, .7);
+    min-height: 100px;
+    transition: height 2.66s ease-out;
+    padding: 20px;
+}
+
+#timer-background div {
+    width: 295px;
+    text-align:left;
+    margin:0 auto;
+}
+
+#form {
+    margin:20px auto;
+    display: inline-block;
+}
+
+#timesup {
+    display: none;
+}
+
+.clear {
+    clear: both;
+}
