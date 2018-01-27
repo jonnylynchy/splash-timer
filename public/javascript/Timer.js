@@ -46,8 +46,9 @@ function Timer(appMinutes) {
     }
     
     this.getTimerText = (mins, secs, minText, secText) => {
-        let secondsText = secs === 0 ? '00' : secs;
-        return `${minText}${mins}:${secText}${secondsText}`;            
+        let secondsText = secs === 0 ? '00' : `${secText}${secs}`;
+        
+        return `${minText}${mins}:${secondsText}`;            
     }
 
 };

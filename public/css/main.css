@@ -9,8 +9,31 @@ body {
 
 header {
     background: #fff no-repeat center/50% url("../images/smu-cpe-logo.png");
-    background-size: 450px;
-    height: 115px;
+    background-size: auto;
+    height: 165px;
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    header {
+        background-size: contain;
+        height: 115px;
+    }
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 700px) {
+    header {
+        background-size: contain;
+        height: 115px;
+    }
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+    header {
+        background-size: contain;
+        height: 115px;
+    }
 }
 
 h1 {
@@ -23,7 +46,7 @@ h2 {
     font-size: 50px;
 }
 
-input {
+input[type='number'] {
     font-size: 30px;
     padding: 15px;
     border: none;
