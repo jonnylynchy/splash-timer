@@ -46,6 +46,12 @@ h2 {
     font-size: 50px;
 }
 
+.container {
+    background-size: cover;
+    text-align: center;
+    text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
+}
+
 input[type='number'] {
     font-size: 30px;
     padding: 15px;
@@ -54,7 +60,6 @@ input[type='number'] {
     outline: none;
     height: 67px;
     width: 150px;
-    float: left;
 }
 
 a, a:active, a:visited {
@@ -64,16 +69,7 @@ a, a:active, a:visited {
     background: rgb(14, 162, 241);
     color: #fff;
     border-radius: 5px;
-    margin-left: 12px;
-    float: left;
     text-shadow: none;
-}
-
-.container {
-    background-size: cover;
-    text-align: center;
-    text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
-
 }
 
 #timer-background {
@@ -90,14 +86,18 @@ a, a:active, a:visited {
 }
 
 #form {
+    width: 295px;
     margin:20px auto;
-    display: inline-block;
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-flow: column;
+}
+
+datalist#defaultNumbers {
+    display: none;
 }
 
 #timesup {
     display: none;
-}
-
-.clear {
-    clear: both;
 }
