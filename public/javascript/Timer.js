@@ -4,7 +4,7 @@ const TIMES_UP = 'Times Up! How did it Go?';
 const HEADING_EL = document.getElementById('countdown');
 const TIMESUP_EL = document.getElementById('timesup');
 
-function Timer(appMinutes) {
+function Timer(appMinutes, database) {
     
     this.countDown = (mins = appMinutes, secs = ZERO, secText = FILL) => {
         let minutes = mins === 0 ? 0 : mins;
@@ -47,7 +47,13 @@ function Timer(appMinutes) {
     
     this.getTimerText = (mins, secs, minText, secText) => {
         let secondsText = secs === 0 ? '00' : `${secText}${secs}`;
-        return `${minText}${mins}:${secondsText}`;            
+        const timerText = `${minText}${mins}:${secondsText}`
+        database.ref().set({
+            timer: {
+                text: timerText
+            }
+        });
+        return timerText;
     }
 
 };

@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,11 +8,13 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
 </head>
+
 <body>
     <header></header>
     <div class="container">
         <h2>Always Be Coding</h2>
         <p>(Session in progress)</p>
+        <p>Additional content</p>
         <div id="timer-background">
             <span id="form">
                 <input id="txtTime" type="number" step="1" min="0" max="100" list="defaultNumbers" />
@@ -22,7 +25,7 @@
                     <option value="15">
                     <option value="20">
                     <option value="25">
-                    <option value="30">                        
+                    <option value="30">
                     <option value="35">
                 </datalist>
                 <a href="#" id="startCountdown">Start</a>
@@ -33,11 +36,25 @@
             </div>
         </div>
     </div>
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
     <script src="javascript/Timer.js"></script>
     <script>
+        const config = {
+            apiKey: "AIzaSyBJVR5SIqxGkDhl0C4ac2wIHqTPwWxxPPc",
+            authDomain: "codingbootcamp-timerapp.firebaseapp.com",
+            databaseURL: "https://codingbootcamp-timerapp.firebaseio.com",
+            projectId: "codingbootcamp-timerapp",
+            storageBucket: "codingbootcamp-timerapp.appspot.com",
+            messagingSenderId: "281181501963"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(config);
+
+        const database = firebase.database();
         const form = document.getElementById("form");
         const input = document.getElementById("txtTime");
         const startBtn = document.getElementById("startCountdown");
+        const timerId = 0;
 
         // Desktop & Mobile Events
         startBtn.onclick = () => startTimer();
@@ -46,10 +63,11 @@
         // Start Event Handler
         function startTimer() {
             const time = input.value;
-            const timer = new Timer(time);
-            timer.countDown();
+            const timer = new Timer(time, database);
+            timer.countDown()
             form.style.setProperty('display', 'none');
         }
     </script>
 </body>
+
 </html>
